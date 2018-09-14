@@ -13,6 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
+ext_dec: for test
 title: declanlc
 email: declanlc@163.com
 description: >- # this means to ignore newlines until "baseurl:"
@@ -29,6 +30,15 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
+
+collections:
+  - staff_members
+
+permalink:
+  /:categories/:year/:month/:day/:title:output_ext
+
+sass:
+  style: compact
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
