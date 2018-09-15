@@ -1,0 +1,11 @@
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/music.css">
+{%- for music in site.data.music.musics -%}
+<hr>
+<h2>{{ music.name }}</h2>
+<div class="flex m-item">
+    <div>
+        <img class="m-img" {% if music.align == "right" %} style="margin-right: 0; margin-left: 5px;" {% endif %} src="{{ site.baseurl }}/assets/images/music/{{ music.img }}" align="{{ music.align }}" >
+        {{ music.summary }}
+    </div>
+</div>
+{%- endfor -%}

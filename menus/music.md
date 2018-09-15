@@ -5,4 +5,4 @@ sidebar_link: true
 url: /music
 ---
 
-{%- include music.html -%}
+{%- include pages/music.html -%}
