@@ -1,6 +1,8 @@
 .m-item {
+    text-align: justify;
     img.m-img {
-        max-width: 150px;
-        min-width: 100px;
+        max-width: 49%;
+        margin-right: $large-font-size / 4;
+        margin-bottom: 0;
     }
 }
