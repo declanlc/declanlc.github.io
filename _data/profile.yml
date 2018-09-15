@@ -1,0 +1,91 @@
+contacts:
+  - name: address
+    text: 地址
+    value: 福建省厦门市湖里区
+  - name: email
+    text: 邮箱 
+    value: declanlc@163.com
+  - name: work
+    text: 职业
+    value: 前端工程师
+  - name: skill
+    text: 技能
+    value: angular *.x | react | react-native | vue | android | webpack | gulp
+  - name: hourglass
+    text: 工龄
+    value: 2.5年
+experiences:
+  - name: comemind
+    company: 厦门珂迈网络
+    from: 2017年07月15日
+    to: 至今
+    schedules:
+      - value: 参与开发厦大图书管理系统
+      - value: 参与封装厦大图书管理系统组件库
+      - value: 独立开发英童android应用
+      - value: 独立开发国学管理系统（web）
+      - value: 前端交互逻辑实现
+      - value: 与后台进行数据对接
+    skills:
+      - value: html、css、angular 1.x
+      - value: vue、react、react-native
+      - value: android
+      - value: vs2015
+      - value: VS Code
+    results:
+      - value: 厦大图书管理系统部分模块（营销、仓储）上线
+      - value: 厦大图书管理系统组件库正式投入使用
+      - value: 英童android应用上线
+      - value: 国学系统（web）完成 80%
+    summary: 公司里面个个都是大神级人物，虽然之前自己也接触过vue和angular，但还不是高手，如今一年过去了，我不仅学了很多框架方面的技术，web优化方面的技术，对于平时公司要求完成的业务，也都能顺利完成，在这里我工作的非常开心，虽说公司不大，涉及的业务也有限，但是在这里我能不断提升自己的工作能力，还能接触到很多有趣的小伙伴，自己的心也能沉静下来。
+  - name: kuailiu
+    company: 厦门快溜网络
+    from: 2017年02月10日
+    to: 2017年07月12日
+    schedules:
+      - value: 福彩网页面编写
+      - value: web仿站
+      - value: 与后台进行数据对接
+    skills:
+      - value: html、css、jq、angular 1.x
+      - value: Sublime Text 3
+    results:
+      - value: 仿站超过5个福彩站点
+      - value: 混合web应用（android）实现
+    summary: 进入这家公司之前，我趁着春节期间自学了js，想着来年可以找份好工作，之前对c++比较熟，所以学起来毫不费劲，但还是遇到过很多坑。投递简历后很快就录取了，工作上得到很多同事的帮助，这时候的我还是一个前端小白，经过三个月的磨练，领导交给我的工作也能顺利完成了，但是接下来由于公司打算搬迁，项目经理同意我们在家里面完成手头的工作，项目经理白天都不会给我们分配任务，只是晚上指派任务，如此在家里工作了一个多月，此时公司里其他员工都纷纷离职了，我犹豫了很久，毕竟我从一个小白得到项目经理的赏识，实在不忍。
+  - name: clarion
+    company: 厦门歌乐
+    from: 2016年6月10日
+    to: 2016年12月10日
+    schedules:
+      - value: 负责应用程序信号图制作
+      - value: 修复车载应用程序bug
+      - value: 测试车载语音导航安卓应用
+    skills:
+      - value: Ubuntu系统
+      - value: value++语言
+      - value: Source Insight
+      - value: excel
+    results:
+      - value: 车载语音导航应用投入使用
+      - value: 车载语音导航安卓应用投入使用
+    summary: 虽然在歌乐只待了半年时间，但是学到很多东西。这是大学毕业后的第一份工作，感受到学校和公司的不同之处，只要积极进取，心态端正，任何难题都可以迎刃而解。
+educations:
+  - school: 厦门大学嘉庚学院
+    from: 2012年09月18日
+    to: 2016年07月04日
+  - school: 湖北省潜江市文昌高级中学
+    from: 2009年09月18日
+    to: 2012年07月04日
+  - school: 湖北省潜江市老新中学
+    from: 2006年09月18日
+    to: 2009年07月04日  
+  - school: 湖北省潜江市老新小学
+    from: 2003年9月18日
+    to: 2006年07月04日 
+  - school: 湖北省监利县新沟镇付家村小学
+    from: 2000年09月18日
+    to: 2003年07月04日 
+  - school: 湖北省监利县新沟镇付家村幼儿园
+    from: 1998年09月18日
+    to: 2000年07月04日 

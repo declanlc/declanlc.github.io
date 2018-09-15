@@ -1,0 +1,49 @@
+/* flex */
+.flex {
+    display: flex;
+}
+
+.i-flex {
+    display: inline-flex;
+}
+
+.a-i-c {
+    align-items: center;
+}
+
+.a-i-s {
+    align-items: flex-start;
+}
+
+.a-i-e {
+    align-items: flex-end;
+}
+
+.j-c-c {
+    justify-content: center;
+}
+
+.j-c-a {
+    justify-content: space-around;
+}
+
+.j-c-b {
+    justify-content: space-between;
+}
+
+.f-wrap {
+    flex-wrap: wrap;
+}
+
+/* quarter of large font size */
+.m-qt-lg {
+    margin-right: $large-font-size / 4;
+}
+
+/* half of large font size */
+.m-hf-lg {
+    margin-right: $large-font-size / 2;
+}
+
+
+

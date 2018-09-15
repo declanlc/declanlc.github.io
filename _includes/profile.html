@@ -1,0 +1,73 @@
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/profile.css">
+<h2>联系方式</h2>
+<ul class="posts-list">
+    {%- for contact in site.data.profile.contacts -%}
+    <li>
+        <div class="flex a-i-s">
+            <div class="i-flex a-i-c">
+                {{ site.data.icons.icon[contact.name] }}
+                <span class="m-qt-lg m-width-4">({{ contact.text }})=></span>
+            </div>
+            <span>{{ contact.value }}</span>
+        </div>
+    </li>
+    {%- endfor -%}
+</ul>
+<hr>
+<h2>工作经历</h2>
+<ul class="posts-list">
+    {%- for exp in site.data.profile.experiences -%}
+    <li>
+        <div class="flex a-i-c f-wrap">
+            {{ site.data.icons.icon[exp.name] }}
+            <h3 class="title-3">{{ exp.company }}</h3>
+            <span class="timestamp">（</span>
+            <span class="m-qt-lg timestamp">{{ exp.from }}</span>
+            <span class="timestamp"> - </span>
+            <span class="timestamp">{{ exp.to }}</span>
+            <span class="timestamp">）</span>
+        </div>
+        <div class="padding-main">
+            <h4 class="title-4">日常工作</h4>
+            <ul>
+                {%- for schedule in exp.schedules -%}
+                <li class="profile-item">{{ schedule.value }}</li>
+                {%- endfor -%}
+            </ul> 
+            <h4 class="title-4">所用技术及工具</h4>
+            <ul>
+                {%- for skill in exp.skills -%}
+                <li class="profile-item">{{ skill.value }}</li>
+                {%- endfor -%}
+            </ul>
+            <h4 class="title-4">工作成果</h4>
+            <ul>
+                {%- for result in exp.results -%}
+                <li class="profile-item">{{ result.value }}</li>
+                {%- endfor -%}
+            </ul>
+            <h4 class="title-4">工作心得</h4>
+            <div class="padding-main">
+                <i class="profile-item"> {{ exp.summary }}</i>
+            </div>
+        </div>
+    </li>
+    {%- endfor -%}
+</ul>
+<hr>
+<h2>教育经历</h2>
+<ul class="posts-list">
+    {%- for education in site.data.profile.educations -%}
+    <li>
+        <div class="flex a-i-c f-wrap">
+            {{ site.data.icons.icon.address }}
+            <span>{{ education.school }}</span>
+            <span class="timestamp">（</span>
+            <span class="m-qt-lg timestamp">{{ education.from }}</span>
+            <span class="timestamp">-</span>
+            <span class="timestamp">{{ education.to }}</span>
+            <span class="timestamp">）</span>
+        </div>
+    </li>
+    {%- endfor -%}
+</ul>

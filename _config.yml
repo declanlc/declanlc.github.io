@@ -16,10 +16,13 @@
 ext_dec: for test
 title: declanlc
 email: declanlc@163.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+description: 
+  declanlc, 对celtic音乐情有独钟，喜欢听民谣/摇滚吉他solo，平时大智若愚，追逐平平淡淡的生活。爱国、敬业、诚实、守信，不爱炫耀。尊重任何一个举止文雅、谈吐文明、认真工作学习的人，确定一定以及肯定的讨厌并唾弃落井下石、见风使舵、阿谀奉承、迎合受众、言不由衷、见杠就抬、装疯卖萌、敷衍了事、浑浑噩噩、破罐破摔，以及以伤害他人和看人笑话为乐趣的人，尤其讨厌网络喷子以及在公共场合大声喧哗的人，信仰：努力做一个好人。
+  # this means to ignore newlines until "baseurl:"
+  # Write an awesome description for your new site here. You can edit this
+  # line in _config.yml. It will appear in your document head meta (for
+  # Google search results) and in your feed.xml site description.
+  
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
@@ -27,7 +30,7 @@ github_username:  declanlc
 
 # Build settings
 markdown: kramdown
-theme: minima
+theme: jekyll-theme-hydeout
 
 sass:
   sass_dir: _sass
@@ -35,10 +38,7 @@ sass:
 
 plugins:
   - jekyll-feed
-
-collections:
-  - staff_members
-
+  
 permalink:
   /:categories/:year/:month/:day/:title:output_ext
 

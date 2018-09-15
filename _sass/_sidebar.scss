@@ -1,0 +1,15 @@
+#sidebar {
+    p.lead {
+        font-size: 0.9rem;
+        text-align: justify;
+    }
+}
+
+#sidebar-nav-links {
+    flex-flow: row;
+    justify-content: space-around;
+    @media (min-width: $large-breakpoint) {
+        flex-flow: column;
+        justify-content: inherit;
+    }
+}

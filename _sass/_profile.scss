@@ -1,0 +1,27 @@
+.m-width-4 {
+    min-width: 4rem;
+}
+
+.padding-main {
+    padding-left: $root-font-size * 1.8;
+    .profile-item {
+        color: $gray-6;
+        font-size: $root-font-size / 1.5;
+    }
+}
+
+.timestamp {
+    color: $gray-4;
+    font-size: $root-font-size / 1.2
+}
+
+.title-3 {
+    color: $gray-6;
+    font-size: $root-font-size;
+    margin: 0;
+}
+
+.title-4 {
+    color: $gray-5;
+    font-size: $root-font-size / 1.2;
+}
