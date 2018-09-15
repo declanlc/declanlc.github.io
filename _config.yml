@@ -30,7 +30,7 @@ github_username:  declanlc
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-hydeout
+theme: 
 
 sass:
   sass_dir: _sass
@@ -38,7 +38,7 @@ sass:
 
 plugins:
   - jekyll-feed
-  
+
 permalink:
   /:categories/:year/:month/:day/:title:output_ext
 
