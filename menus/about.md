@@ -5,6 +5,6 @@ sidebar_link: true
 url: /about
 ---
 
-{%- include profile.html -%}
+{%- include pages/profile.html -%}
 
 ***

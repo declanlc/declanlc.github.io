@@ -1,8 +1,18 @@
 .m-item {
     text-align: justify;
     img.m-img {
-        max-width: 49%;
-        margin-right: $large-font-size / 4;
+        float: left;
+        height: $root-line-height * 5rem;
+        margin-right: $root-font-size / 4;
         margin-bottom: 0;
+        @media (min-width: $large-breakpoint) {
+            margin-right: $large-font-size / 4;
+        }
+
+        &.right {
+            float: right;
+            margin-right: 0;
+            margin-left: $root-font-size / 4;
+        }
     }
 }
