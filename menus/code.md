@@ -5,4 +5,117 @@ sidebar_link: true
 url: /code
 ---
 
-待定
+**what about static in java?**
+
+小编本不是一个java资深人员，现有的一些理解完全是实际开发中的一些结论，难免会有一些误解，有任何异议可以邮件call。
+
+在早些年android开发中，会遇到`activity`多的时候，想要关闭固定的activity，虽然这种情况会导致内存问题，但是有时候为了提高用户体验，确实要这么做。这和`static`有什么关系呢，下面这个例子恰好可以说明此：
+
+```java
+import java.util.List;
+import java.util.LinkedList;
+public class ActivityManager {
+    public static List<Activity> activityList 
+        = new LinkedList<Activity>();
+    public ActivityManager () { }
+}
+```
+
+这里用到了`List`和`LinkedList`工具类，我们只是为了创建一个`Activity`的集合类，当然你可以选择任意的比如：`Stack`、`Map`等，而这里的`activityList`完全可以更改成以下：
+
+```java
+new Collections.synchronizedList(
+    new LinkedList<Activity>()
+);
+```
+
+接下来我们可以很容易的添加一个方法，用来往这个集合里面追加活动页面`Activity`：
+
+```java
+public static void 
+addActivity (Activity activity) {
+    if(
+        !activityList.contains(activity)
+    ) {
+        activityList.add(activity);
+    }
+}
+```
+
+这里我们并不用按照名字来追加`Activity`，因为那样做没有意义，这里之所以要管理活动页面，就是要保持对`Activity`的引用，才能对此活动页面进行后续操作，比如下面关闭指定的活动页面：
+
+```java
+public static void
+finishSingleActivity (Activity activity) {
+    if(activity != null) {
+        if (
+            activityList.contains(activity)
+        ) {
+            activityList.remove(activity);
+        }
+        activity.finish();
+        activity = null;
+    }
+}
+```
+
+如上，java 内部自带垃圾回收机制，别忘了释放`activity`，当回到主界面想要关闭所有后台活动页面，也可以添加如下方法，最后别忘了清空 ActivityList：
+
+```java
+public static void
+finishAllActivity () {
+    for (
+        Activity activity : activityList
+    ) {
+        activity.finish();
+        activity=null;
+    }
+    activityList.clear();
+}
+```
+
+有时候，我们无法拿到某个`Activity`的引用，想要指定类名去结束掉某个活动页面，也可以这么做：
+
+```java
+public static void
+finishActivityByClass (Class<?> cls) {
+    Activity tempActivity = null;
+    for (
+        Activity activity : activityList
+    ) {
+        if (
+            activity.getClass().equals(cls)
+        ) {
+            tempActivity = activity;
+        }
+    }
+
+    finishSingleActivity(tempActivity);
+}
+```
+
+以上需注意，传入`cls`之前必须格式化成这种形式：`Class.forName(packageName + className))`,
+虽然我们只关注`String`类型的`className`，但是`Class.forName`只认完整路径。
+
+以上说了这么多，其实就是想引出`static`这个东西，要说明这个东西，必须理解堆（heap）和栈（stack）的概念，无论是c、c++、c#以及其他语言，都离不开这两个，在java中，我们定义的变量诸如 `int x = 0`这种是被JVM压入到事先建立的`stack`当中的，可以想象每个方法都有一个局部对应的`stack`缓存区，当方法被调用并执行完成，这个方法对应`stack`也被释放掉了，而在应用程序当中，许多方法往往被频繁的使用，这意味着很多个`stack`瞬间建立，也瞬间释放，这说明`stack`的读取速度会直接影响到应用程序运行效率，因此任何一个语言都要求`stack`的读取速度非常快，而实际上也确实是这样的，`stack`的数据交换速度相当于计算机寄存器的速度。
+
+而对于`heap`，java当中诸如`new HashMap()`这种形式，都是动态分配内存区域，类似c、c++里面动态分配内存一样，比如c语言里面想要分配100个整型区域：
+
+```c
+int *p;
+p = (int*)malloc(sizeof(int) * 100);
+```
+
+而在java或c++当中，当我们指定`new`关键字时，类似以上的动作已经自动完成了，到此，对于动态分配，程序里面运用没有普通变量定义来的频繁，因此`heap`的读取速度是远小于`stack`的，那么我们再来看看上面的例子里面的：
+
+```java
+public static List<Activity> activityList 
+    = new LinkedList<Activity>();
+```
+
+JVM在初始化应用程序的时候，会优先初始化带有`static`描述的变量，即使这些变量所属的类还没有被`new`出来，JVM依然会将这些变量初始化到一块单独的内存当中，即独立于`heap`和`stack`的单独的`static`存储区域，而一旦初始化，此类当中的这个变量的值在整个运行期间不可再次变更，这意味着，无论后面这个类被实例化多少次，不同个实例引用这个静态成员时得到的都是同一个值，因为它们都是去这个静态区域去获取。
+
+以上就是小编对`static`的理解，在实践当中，`static`用到的地方是相当的多，比如获取相机设备，再比如建立全局类管理活动页面，但凡是多个实例共享方法，或者某个方法要被多个不同的类使用，都可以定义`static`方法，但无论如何使用，一定要保证`static`定义的方法具有公用性，以及不经常变动。
+
+下一次将讨论java里面的“回调方法”
+
