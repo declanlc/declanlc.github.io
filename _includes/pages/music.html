@@ -2,9 +2,11 @@
 {%- for music in site.data.music.musics -%}
 <hr>
 <h2>{{ music.name }}</h2>
-<div class="m-item">
-    <img class="m-img {% if music.align == "right" %} right {% endif %}" src="{{ site.baseurl }}/assets/images/music/{{ music.img }}" align="{{ music.align }}" >
+<div class="flex m-item">
+    <div>
+        <img class="m-img {% if music.align == "right" %} right {% endif %}" src="{{ site.baseurl }}/assets/images/music/{{ music.img }}" >
         {{ music.summary }}
+    </div>
 </div>
 {%- endfor -%}
 
