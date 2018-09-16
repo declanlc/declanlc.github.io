@@ -1,4 +1,8 @@
 musics:
+  - name: Ich Verlasse Heut' Dein Herz
+    img: ich_verlasse_heut_dein_herz.jpg
+    align: left
+    summary: 一直怀疑：是否关于小丑的音乐都是这么荡气回肠，哀而不伤，余音绕梁，最爱钢琴配贝斯，一弹一和美如斯，最怕小丑别佳人，如此哀婉如此...，这就是词穷吧，正如这首歌，就像旋律一直这么下去。
   - name: Ready For The Storm
     img: on_fire.jpg
     align: left
@@ -7,3 +11,11 @@ musics:
     img: dracula.jpg
     align: right
     summary: Dracula's Tango，荷东时代见证之一，有人爱它因为恐龙MV，有人爱它因为李贞贤的《高潮》，还有人因为郭小霖的《小霖秘笈》，而我爱它是因为里面那声 Dracula la la...
+  - name: Hai un paraiso
+    img: hai_un_paraiso.jpg
+    align: left
+    summary: 女主唱名叫 Rosa Cedron，1996-2005 其间，她担任 Luar Na Lubre 的 Vocals，而 LNL 是来自 Galicia Span（西班牙加利西亚地区）的一支凯尔特风格的乐队，这首歌以夜色和月光来形容这片被人类污染的大海曾经是多么美丽，希望大海可以早日复原，而且人类不应该继续破坏。
+  - name: Fairy Tale
+    img: fairy_tale.jpg
+    align: right
+    summary: 一八六二年七月四日，Lewis Carroll 和他的一个朋友带着利德尔三姐妹划着小艇溯泰晤士河而上，从牛津至戈斯托旅游。他在船上给小女孩爱丽丝讲了一个故事，后来这个故事的完整版《爱丽丝梦游仙境》问世，紧跟着又编写了姊妹篇《爱丽丝镜中奇遇》，歌词是后者的卷首诗，用来怀念往昔岁月。
