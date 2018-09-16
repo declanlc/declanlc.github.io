@@ -1,0 +1,16 @@
+.j-wrap {
+    .a-nav {
+        color: $gray-4 !important;
+        text-decoration: none !important;
+        &:hover .d-hover {
+            text-decoration: underline;
+        }
+    }
+    .i-type {
+        color: $brown;
+        font-size: 1.5rem;
+        svg {
+            margin-right: $large-font-size / 4;
+        }
+    }
+}

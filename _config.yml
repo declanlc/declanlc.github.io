@@ -42,6 +42,12 @@ plugins:
 permalink:
   /:categories/:year/:month/:day/:title:output_ext
 
+collections:
+  code_java:
+    output: true
+
+collections_dir: floors
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

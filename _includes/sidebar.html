@@ -1,10 +1,12 @@
 <div id="sidebar">
   <header>
     <{% if page.layout == "index" %}h1{% else %}div{% endif %} class="site-title">
-      <a href="{{ site.baseurl }}/">
+      <a href="javascript:;">
         {% unless page.url == "/" %}
           <span class="back-arrow icon">{% include svg/back-arrow.svg %}</span>
         {% endunless %}
+      </a>
+      <a href="{{ site.baseurl }}/">
         {{ site.title }}
       </a>
     </{% if page.layout == "index" %}h1{% else %}div{% endif %}>
@@ -19,3 +21,12 @@
   {% include sidebar-icon-links.html %}
   {% include copyright.html %}
 </div>
+
+<script type="text/javascript">
+  let bk = document.getElementsByClassName('back-arrow')[0];
+  bk && declanlc.bind(bk,'click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    window.history.back();
+  });
+</script>
