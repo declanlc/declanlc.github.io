@@ -7,5 +7,12 @@ let declanlc = {
        } else {
            target.addEventListener(name, fn, false);
        }
+    },
+    getStyle: function (element,cssPropertyName){
+        if(window.getComputedStyle){
+            return window.getComputedStyle(element)[cssPropertyName];
+        }else{
+            return element.currentStyle[cssPropertyName]; 
+        }
     }
 }

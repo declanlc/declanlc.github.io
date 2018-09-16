@@ -45,7 +45,9 @@ permalink:
 collections:
   code_java:
     output: true
-
+  movie_suspense:
+    output: true
+    
 collections_dir: floors
 
 # Exclude from processing.

@@ -4,4 +4,4 @@ title: 电影
 sidebar_link: true
 ---
 
-待定
+{%- include pages/movie/suspense.html -%}

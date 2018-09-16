@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/movie/suspense.css">
+{%- for suspense in site.movie_suspense -%}
+<hr>
+<div class="m-sus">
+    <a class="flex" href="javascript:;">
+        <div class="i-wrap">
+            <img src="{{ site.baseurl }}/assets/images/movie/triangle_index.jpg" alt="triangle">
+        </div>
+        <div class="flex f-d-c j-c-b d-wrap" id="wode">
+            <div>
+                <div>{{ suspense.title }}</div>
+                <div class="m-desc">{{ suspense.desc }}123 sdfsdfs sdfsdf  sdfsdf sdfsdf sdfsdf sdfsdf sdfsdf</div>
+            </div>
+            <span>{{ suspense.date }}</span>
+        </div>
+    </a>
+</div>
+{%- endfor -%}
+
+<script type="text/javascript">
+    window.onload = function(){
+        let descs = document.getElementsByClassName('m-desc')[0];
+        // console.log(declanlc.getStyle(document.body || document.documentElement, 'lineHeight'));
+        // console.log(document.defaultView.getComputedStyle(document.documentElement, null).lineHeight);
+        console.log(descs)
+
+        declanlc.bind(descs, 'click', function(e) {
+            console.log(declanlc.getStyle(descs, 'height'));
+            console.log(descs.scrollHeight)
+        })
+    }
+</script>

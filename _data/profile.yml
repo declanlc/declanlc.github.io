@@ -5,6 +5,9 @@ contacts:
   - name: email
     text: 邮箱 
     value: declanlc@163.com
+  - name: phone
+    text: 手机
+    value: 15711558982
   - name: work
     text: 职业
     value: 前端工程师

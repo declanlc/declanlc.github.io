@@ -1,0 +1,17 @@
+.m-sus {
+    .d-wrap {
+        flex: 1;
+        .m-desc {
+            height: $root-line-height * 4rem;
+            overflow: hidden;
+        }
+    }
+    .i-wrap {
+        img {
+            margin-bottom: 0;
+            width: 100%;
+        }
+        width: $large-font-size * 6; 
+        margin-right: $root-font-size / 4;
+    }
+}
