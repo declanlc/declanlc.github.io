@@ -2,31 +2,52 @@
 {%- for suspense in site.movie_suspense -%}
 <hr>
 <div class="m-sus">
-    <a class="flex" href="javascript:;">
+    <a class="flex" href="{{ site.baseurl }}{{ suspense.url }}">
         <div class="i-wrap">
             <img src="{{ site.baseurl }}/assets/images/movie/triangle_index.jpg" alt="triangle">
         </div>
-        <div class="flex f-d-c j-c-b d-wrap" id="wode">
+        <div class="flex f-d-c j-c-b d-wrap">
             <div>
-                <div>{{ suspense.title }}</div>
-                <div class="m-desc">{{ suspense.desc }}123 sdfsdfs sdfsdf  sdfsdf sdfsdf sdfsdf sdfsdf sdfsdf</div>
+                <h3 class="m-title">{{ suspense.title }}</h3>
+                <div class="m-desc flex">
+                    <div class="m-content">
+                            {{ suspense.desc }}
+                    </div>
+                    <!-- <span class="m-ellipsis flex f-d-c j-c-e">...</span> -->
+                </div>
+                <div>
+                    <span>个人评：</span>
+                   {%- for item in suspense.star -%}
+                   <span class="m-star">
+                        {{ site.data.icons.icon.star }}
+                       </span>
+                   {% endfor %}
+                </div>
             </div>
-            <span>{{ suspense.date }}</span>
+            <span class="timestamp">{{ suspense.date }}</span>
         </div>
     </a>
 </div>
 {%- endfor -%}
 
 <script type="text/javascript">
-    window.onload = function(){
-        let descs = document.getElementsByClassName('m-desc')[0];
-        // console.log(declanlc.getStyle(document.body || document.documentElement, 'lineHeight'));
-        // console.log(document.defaultView.getComputedStyle(document.documentElement, null).lineHeight);
-        console.log(descs)
-
-        declanlc.bind(descs, 'click', function(e) {
-            console.log(declanlc.getStyle(descs, 'height'));
-            console.log(descs.scrollHeight)
+   {
+    let descs = document.getElementsByClassName('m-desc') || [];
+    // console.log(declanlc.getStyle(document.body || document.documentElement, 'lineHeight'));
+    // console.log(document.defaultView.getComputedStyle(document.documentElement, null).lineHeight);
+    
+    if(descs.length !== 0) {
+        [].forEach.call(descs, function(desc){
+            if(window.parseFloat(declanlc.getStyle(desc, 'height')) < desc.scrollHeight) {
+                let child = document.createElement('span');
+                child.classList.add('m-ellipsis');
+                child.classList.add('flex');
+                child.classList.add('f-d-c');
+                child.classList.add('j-c-e');
+                child.appendChild(document.createTextNode('...'));
+                desc.appendChild(child);
+            }
         })
     }
+   }
 </script>

@@ -23,10 +23,12 @@
 </div>
 
 <script type="text/javascript">
-  let bk = document.getElementsByClassName('back-arrow')[0];
-  bk && declanlc.bind(bk,'click', function(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    window.history.back();
-  });
+  window.onload = function(){
+    let bk = document.getElementsByClassName('back-arrow')[0];
+    bk && declanlc.bind(bk,'click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      window.history.back();
+    });
+  }
 </script>

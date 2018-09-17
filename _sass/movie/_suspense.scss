@@ -1,17 +1,45 @@
 .m-sus {
-    .d-wrap {
-        flex: 1;
-        .m-desc {
-            height: $root-line-height * 4rem;
-            overflow: hidden;
-        }
+    a {
+        text-decoration: none !important;
     }
+    /* 图片 */
     .i-wrap {
+        max-width: 35%;
         img {
             margin-bottom: 0;
             width: 100%;
         }
-        width: $large-font-size * 6; 
         margin-right: $root-font-size / 4;
+        @media (min-width: 30rem) {
+            margin-right: $root-font-size / 2;
+        }
+    }
+    /* 描述 */
+    .d-wrap {
+        max-width: 65%;
+        .m-title {
+            margin: 0;
+            max-height: 2rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .m-desc {
+            height: $root-line-height * 3rem;
+            overflow: hidden;
+            .m-content {
+                text-align: justify;
+            }
+
+            color: $gray-4;
+        }
+
+        .m-star {
+            color: #c79d1f;
+        }
+
+        .timestamp {
+            color: $gray-6;
+        }
     }
 }
