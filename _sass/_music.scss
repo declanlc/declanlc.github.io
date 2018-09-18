@@ -1,5 +1,9 @@
 .m-item {
     text-align: justify;
+    .m-desc {
+        color: $gray-4;
+        text-decoration: none !important;
+    }
     img.m-img {
         float: left;
         height: $root-line-height * 5rem;

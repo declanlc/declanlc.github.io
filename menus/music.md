@@ -4,4 +4,4 @@ title: 音乐
 sidebar_link: true
 ---
 
-{%- include pages/music.html -%}
+{%- include pages/music/gothic.html -%}

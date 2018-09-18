@@ -47,6 +47,8 @@ collections:
     output: true
   movie_suspense:
     output: true
+  music_gothic:
+    output: true
     
 collections_dir: floors
 

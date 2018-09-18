@@ -1,0 +1,13 @@
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/music.css">
+{%- for gothic in site.music_gothic -%}
+<hr>
+<h2>{{ gothic.title }}</h2>
+<div class="flex m-item">
+    <a class="m-desc" href="{{ site.baseurl }}{{ gothic.url }}">
+        <img class="m-img {% if gothic.align == "right" %} right {% endif %}" src="{{ site.baseurl }}/assets/images/music/{{ gothic.img }}" >
+        {{ gothic.summary }}
+    </a>
+</div>
+{%- endfor -%}
+
+
