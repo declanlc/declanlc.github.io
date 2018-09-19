@@ -40,6 +40,8 @@ body {
   padding: $section-spacing;
 
   .site-title {
+    display: flex;
+    align-items: center;
     font-family: "Abril Fatface", serif;
     font-weight: normal;
     font-size: $large-font-size;
@@ -231,7 +233,7 @@ body {
   }
 
   &:hover, &:focus {
-    text-decoration: underline;
+    // text-decoration: underline;
     &.icon {
       text-decoration: none;
     }

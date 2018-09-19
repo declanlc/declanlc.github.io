@@ -1,9 +1,11 @@
 <div id="sidebar">
   <header>
     <{% if page.layout == "index" %}h1{% else %}div{% endif %} class="site-title">
-      <a href="javascript:;">
+      <a class="i-flex a-i-c back-arrow icon" href="javascript:;">
         {% unless page.url == "/" %}
-          <span class="back-arrow icon">{% include svg/back-arrow.svg %}</span>
+          <!-- <span class="back-arrow icon">{% include svg/back-arrow.svg %}</span> -->
+          <!-- {% include svg/back-arrow.svg %} -->
+          {{ site.data.icons.icon.back }}
         {% endunless %}
       </a>
       <a href="{{ site.baseurl }}/">

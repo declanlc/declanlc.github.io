@@ -57,5 +57,15 @@
     margin-right: $large-font-size / 2;
 }
 
+.t-a-j {
+    text-align: justify;
+}
+
+.t-o-e {
+    padding-right: 0.8rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
 

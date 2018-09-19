@@ -2,18 +2,20 @@
 {% for code_java in site.code_java %}
  <hr>
  <div class="j-wrap">
-    <a class="a-nav" href="{{ $site.baseurl }}{{ code_java.url }}">
-        <h2>{{ code_java.title }}</h2>
-        <p class="d-hover">{{ code_java.desc }}</p>
+    <a class="j-wrap" href="{{ $site.baseurl }}{{ code_java.url }}">
+        <div class="c-wrap">
+            <h2 class="t-o-e">{{ code_java.title }}</h2>
+            <p class="t-a-j">{{ code_java.desc }}</p>
+            <p class="flex j-c-b a-i-s">
+                <span class="flex a-i-c i-type">
+                    {%- for icons in code_java.types -%}
+                    {{ site.data.icons.icon[icons.type] }}
+                    {%- endfor -%}
+                </span>
+                <span>{{ code_java.date }}</span>
+            </p>
+        </div>
      </a>  
-     <p class="flex j-c-b a-i-s">
-         <span class="flex a-i-c i-type">
-             {%- for icons in code_java.types -%}
-             {{ site.data.icons.icon[icons.type] }}
-             {%- endfor -%}
-         </span>
-         <span>{{ code_java.date }}</span>
-     </p>
  </div>
 {% endfor %}
 
